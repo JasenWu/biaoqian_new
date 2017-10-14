@@ -9,7 +9,7 @@ function scrolltop()
     timer=setTimeout("scrolltop()",1) //1毫秒调用一次scrolltop()方法
 }
 $(function () {
-
+    //动画
     $('.hiSlider1').hiSlider({
         isFlexible: true,
         isSupportTouch: true,
@@ -19,18 +19,68 @@ $(function () {
         }
     });
 
-
+    //置顶
     $("#scrolltop").on("click",function () {
-        console.log(124);
+
         scrolltop();
     })
+    $("#area-list").on("click",function () {
+        $("#pro-list").toggle(function () {
+            var isVisible = $("#pro-list").is(":visible");
+            console.log(isVisible);
+            if(isVisible){//显示出了列表项
+                var val = $("#area-list .area-input").text();
+                var proName = "";
+                var rightIcon = $('<span class="iconfont icon-duihao"></span>');
 
-    setTimeout(function () {
-        $("#white-line").height(function () {
-            var height = $(window).height();
-            return height;
-        })
-    },600)
+                $("#pro-list li").each(function(index,value) {
+                    console.log(name,$(value).text())
+                    proName = $(value).text();
+                    $(value).find(".iconfont").remove();
+                    $(value).removeClass("active");
+
+
+                });
+                $("#pro-list li").each(function(index,value) {
+                    console.log(name,$(value).text())
+                    proName = $(value).text();
+
+                    if(val == proName){
+
+
+                        $(value).append(rightIcon);
+                        $(value).addClass("active");
+
+
+
+
+
+                    }
+
+
+                });
+
+
+
+
+
+
+            }
+        });
+
+
+
+    })
+
+    $("#pro-list li").on("click",function () {
+        var val = $(this).text();
+        $("#area-list .area-input").text(val);
+        $("#pro-list").hide();
+    });
+
+
+
+
 
 
 
