@@ -74,7 +74,12 @@ $(function () {
 
     $("#pro-list li").on("click",function () {
         var val = $(this).text();
-        $("#area-list .area-input").text(val);
+        if(val == "全部省份"){
+            $("#area-list .area-input").text("全部");
+        }else{
+            $("#area-list .area-input").text(val);
+        }
+
         $("#pro-list").hide();
     });
 
