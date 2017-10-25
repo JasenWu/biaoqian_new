@@ -83,6 +83,10 @@ $(function () {
         $("#pro-list").hide();
     });
 
+    $("#closeRemind").on("click",function () {
+        $("#closeRemindWrap").slideUp();
+    })
+
 
 
 
