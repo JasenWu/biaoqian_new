@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>我</title>
+    <title>完善资料</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+ <!---->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
 
 </head>
-<body>
+<body style="position:relative;">
 <div class="container-fluid page-body me-page wanshan" id="scrollmenu">
     <div class="row height-100">
         <div class="col-12">
@@ -28,57 +31,67 @@
 
                                 <span class="float-left label-gray">&nbsp;&nbsp;手机号:</span>
                                 &nbsp;
-                                <b></b>
+                                <input type="text" class="float-left input-wanshan"/>
                             </div>
                         </div>
                         <div class="col-12 list guanzhu">
-                            <div class="clearfix me-line-height">
+                            <div class="clearfix me-line-height" id="role_list">
 
                                 <span class="float-left label-gray">&nbsp;&nbsp;角色:</span>
                                 &nbsp;
-
                                 <button class="btn btn-dark btn-outline-dark">个人</button>
                                 &nbsp;
-                                <button  class="btn btn-dark btn-outline-primary">公司</button>
+                                <button class="btn btn-dark btn-outline-primary">公司</button>
                             </div>
                         </div>
                         <div class="col-12 list guanzhu">
                             <div class="clearfix me-line-height">
-
                                 <span class="float-left label-gray">&nbsp;&nbsp;姓名:</span>
-                                &nbsp;
-                                <b></b>
+                                <input type="text" class="float-left input-wanshan"/>
                             </div>
                         </div>
                         <div class="col-12 list guanzhu">
                             <div class="clearfix me-line-height">
-
                                 <span class="float-left label-gray">&nbsp;&nbsp;公司名称:</span>
-                                &nbsp;
-                                <b></b>
+                                <input type="text" class="float-left input-wanshan"/>
                             </div>
                         </div>
                         <div class="col-12 list">
                             <div class="clearfix">
 
-                                <span class="float-left label-gray">&nbsp;&nbsp;营业执照/名片:</span>
+                                <span class="float-left label-gray card-name" >&nbsp;&nbsp;营业执照/名片:</span>
 
                                 &nbsp;
-                                <img src="./img/upload-btn.png" class="upload-btn" />
+                                <div class="file-upload">
+
+                                    <img src="./img/bg.jpg" id="imgPre" class="upload-btn" />
+
+                                    <div class="upload-icon">
+                                        <img src="./img/upload.png" class="icon-shangchuan"  />
+                                    </div>
+
+
+                                    <input id="imageFileUpload" class="file-input" type="file" />
+                                    <div class="text">选填,点击上传</div>
+
+
+                                </div>
 
                             </div>
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
         </div>
+        <div class="col-12">
+          <div class="profile-submit">
+              <button class="btn btn-primary form-control ">&nbsp;提交&nbsp;</button>
+          </div>
+        </div>
+
     </div>
-    <div class="profile-submit">
-        <button   class="btn btn-primary form-control ">&nbsp;提交&nbsp;</button>
-    </div>
+
 </div>
 <script src="./js/jquery.1.9.1.js"></script>
 <script src="./js/jquery.hiSlider.js"></script>
